@@ -1,0 +1,30 @@
+---
+import Document from '../components/Document.astro'
+import Layout from '../svelte/register/Layout.svelte'
+import SuperBody from '../svelte/register/SuperBody.svelte'
+import Errs from '../svelte/register/Errs.svelte'
+import BottomNavigation from '../svelte/register/BottomNavigation.svelte'
+import NavigationButtons from '../svelte/register/NavigationButtons.svelte'
+---
+
+<Document title="register form">
+    <div slot="layout">
+        <Layout client:idle>
+            <SuperBody client:load />
+        </Layout>
+    </div>
+    <nav slot="nav">
+        <BottomNavigation client:visible>
+            <NavigationButtons client:visible />
+        </BottomNavigation>
+    </nav>
+    <div slot="err">
+        <Errs client:visible />
+    </div>
+</Document>
+
+<style lang="scss">
+    nav {
+        @apply sticky bottom-0;
+    }
+</style>

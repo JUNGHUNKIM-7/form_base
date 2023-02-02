@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$base-color: #036;
+$size_sm: 640px;
+$size_md: 1024px;
+$size_lg: 1536px;
+$primary_font: 'Poppins';
+$header_font: 'Outfit';
+
+@mixin debug($len: 1) {
+    & {
+        @apply bg-red-400;
+    }
+
+    @for $i from 1 through $len {
+        *:nth-child(#{$i}) {
+            background-color: lighten($base-color, $i * 15%);
+            border: 1px dashed black;
+        }
+    }
+}
+
+@mixin darkMode($isDark: false) {
+    @if $isDark == true {
+        @apply bg-neutral-900;
+        input[type='text'] {
+            @apply border_darkmode;
+        }
+        button {
+            @apply border_darkmode;
+        }
+        @content;
+    } @else {
+        @apply bg-slate-100;
+        input[type='text'] {
+            @apply border_lightmode;
+        }
+        button {
+            @apply border_lightmode;
+        }
+        @content;
+    }
+}
+
+@mixin hover($ok: true) {
+    @if $ok {
+        @apply hover:bg-green-500 active:bg-white;
+    } @else {
+        @apply hover:bg-red-500 active:bg-white;
+    }
+}
+
+@layer base {
+    body {
+        font-family: $primary_font;
+        @apply scroll;
+    }
+    button {
+        font-family: $primary_font;
+        @apply border_ px-2 py-1 capitalize md:text-h6;
+    }
+    header {
+        font-family: $header_font;
+        font-weight: bold;
+        @apply capitalize;
+    }
+    h1 {
+        @apply text-h1;
+    }
+    h2 {
+        @apply text-h2;
+    }
+    h3 {
+        @apply text-h3;
+    }
+    h4 {
+        @apply text-h4;
+    }
+    h5 {
+        @apply text-h5;
+    }
+    h6 {
+        @apply text-h6;
+    }
+    div,
+    p {
+        @apply text-p;
+    }
+    ul {
+        font-family: $header_font;
+        @apply flex_;
+        li {
+            @apply text-h5;
+        }
+    }
+    input[type='text'] {
+        @apply input_border_ h-8;
+    }
+    article {
+        @apply first-letter:uppercase;
+    }
+}
+
+@layer components {
+    .lightmode_ {
+        @include darkMode();
+    }
+    .darkmode_ {
+        @include darkMode(true);
+    }
+    .btn_ok {
+        @include hover();
+    }
+    .btn_no {
+        @include hover(false);
+    }
+    .d1 {
+        @include debug();
+    }
+    .d2 {
+        @include debug(2);
+    }
+    .d3 {
+        @include debug(3);
+    }
+    .d4 {
+        @include debug(4);
+    }
+    .d5 {
+        @include debug(5);
+    }
+}
+
+@layer utilities {
+    .border_darkmode {
+        @apply border-2 border-slate-100;
+    }
+    .border_lightmode {
+        @apply border-2 border-gray-800;
+    }
+    .grid_ {
+        @apply grid grid-flow-dense auto-rows-fr grid-cols-4 gap-2 md:grid-cols-8 md:gap-4;
+    }
+    .flex_ {
+        @apply flex items-center;
+    }
+    .input_border_ {
+        @apply rounded-sm border border-black;
+    }
+    .border_ {
+        @apply rounded-md border border-black;
+    }
+    .border_bold {
+        @apply rounded-md border-2 border-gray-800;
+    }
+    .border_dashed {
+        @apply rounded-md border-2 border-dashed border-gray-800;
+    }
+    .no_scroll::-webkit-scrollbar {
+        display: none;
+    }
+    .no_scroll {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .scroll {
+        -ms-overflow-style: auto;
+        scrollbar-width: thin;
+    }
+    ::-webkit-progress-bar {
+        @apply bg-green-500;
+    }
+    ::-moz-progress-bar {
+        @apply bg-green-500;
+    }
+}
