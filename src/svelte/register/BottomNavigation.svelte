@@ -3,7 +3,7 @@
     import { toggleStore } from '../../utils/value_store'
 </script>
 
-<div>
+<nav>
     <!-- vali 1 || vali2 || vali3 .. -->
     {#if $hasErrPage0}
         <header class="bad">
@@ -19,11 +19,11 @@
         </header>
     {/if}
     <slot />
-</div>
+</nav>
 
 <style lang="scss">
-    div {
-        @apply flex h-20 w-full items-center justify-between rounded-t-md bg-black px-4 opacity-90 md:px-40 md:py-6;
+    nav {
+        @apply sticky bottom-0 flex h-20 w-full items-center justify-between bg-black px-4 opacity-90 md:px-40 md:py-6;
         .success {
             @apply text-green-500;
         }
@@ -39,7 +39,7 @@
             i {
                 @apply relative mr-4 flex w-fit text-h3 md:mr-10 md:text-h1;
                 input {
-                    @apply absolute right-0 bottom-0 h-full w-full;
+                    @apply absolute right-0 bottom-0 z-10 h-full w-full;
                 }
             }
         }

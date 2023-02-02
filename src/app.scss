@@ -55,11 +55,14 @@ $header_font: 'Outfit';
 @layer base {
     body {
         font-family: $primary_font;
-        @apply scroll;
+        @apply scroll antialiased;
     }
     button {
         font-family: $primary_font;
         @apply border_ px-2 py-1 capitalize md:text-h6;
+        :hover {
+            @apply shadow-md;
+        }
     }
     header {
         font-family: $header_font;
@@ -85,12 +88,21 @@ $header_font: 'Outfit';
         @apply text-h6;
     }
     div,
-    p {
-        @apply text-p;
+    p,
+    article,
+    label,
+    li {
+        @apply align-middle text-p leading-relaxed tracking-normal;
+    }
+    span {
+        @apply align-middle;
+    }
+    i {
+        @apply flex_;
     }
     ul {
         font-family: $header_font;
-        @apply flex_;
+        @apply flex_ list-inside;
         li {
             @apply text-h5;
         }

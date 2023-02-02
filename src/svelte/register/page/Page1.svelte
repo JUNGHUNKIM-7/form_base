@@ -5,7 +5,7 @@
 <main>
     <Inputs />
     <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi
+        lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi
         temporibus repellat inventore corrupti dignissimos, rem, iure earum
         blanditiis hic quas esse unde optio distinctio cumque suscipit cum
         perferendis? Consectetur?

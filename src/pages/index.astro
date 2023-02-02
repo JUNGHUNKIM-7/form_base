@@ -7,24 +7,16 @@ import BottomNavigation from '../svelte/register/BottomNavigation.svelte'
 import NavigationButtons from '../svelte/register/NavigationButtons.svelte'
 ---
 
-<Document title="register form">
-    <div slot="layout">
+<Document title="form">
+    <Fragment slot="layout">
         <Layout client:idle>
             <SuperBody client:load />
         </Layout>
-    </div>
-    <nav slot="nav">
-        <BottomNavigation client:visible>
+    </Fragment>
+    <Fragment slot="nav">
+        <BottomNavigation client:load>
+            <Errs client:load />
             <NavigationButtons client:visible />
         </BottomNavigation>
-    </nav>
-    <div slot="err">
-        <Errs client:visible />
-    </div>
+    </Fragment>
 </Document>
-
-<style lang="scss">
-    nav {
-        @apply sticky bottom-0;
-    }
-</style>

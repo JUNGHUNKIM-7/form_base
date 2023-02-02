@@ -9,12 +9,12 @@
 
 <style lang="scss">
     div {
-        @apply flex items-center rounded-md border-2 border-gray-700 px-2 text-xs md:py-1 md:text-p;
+        @apply my-2 mx-2 flex items-center rounded-md border-2 border-gray-700 px-2 text-xs md:py-1 md:text-p;
         div {
-            @apply mx-2 my-4 rounded-sm border border-yellow-400 capitalize text-yellow-400;
+            @apply mx-2 rounded-sm border border-yellow-400 capitalize text-yellow-400;
         }
         h6 {
-            @apply px-4 text-sm first-letter:uppercase md:text-h6;
+            @apply px-4 text-sm first-letter:uppercase md:text-p;
         }
     }
 </style>

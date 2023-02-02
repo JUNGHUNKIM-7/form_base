@@ -41,7 +41,7 @@
                         @apply mt-2 text-center text-xs md:text-h6;
                     }
                     i {
-                        @apply flex h-full w-full rounded-full px-2 py-2 text-h6 md:text-h3;
+                        @apply h-full w-full rounded-full px-2 py-2 text-h6 md:text-h3;
                     }
                 }
             }
