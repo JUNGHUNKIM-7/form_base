@@ -77,7 +77,10 @@
         div {
             @apply flex flex-col;
             label {
-                @apply mt-4 first-letter:uppercase;
+                @apply first-letter:uppercase;
+            }
+            &:not(:first-child) {
+                @apply mt-4;
             }
         }
     }

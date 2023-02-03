@@ -5,10 +5,10 @@
 <main>
     <Inputs />
     <div>
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi
-        temporibus repellat inventore corrupti dignissimos, rem, iure earum
-        blanditiis hic quas esse unde optio distinctio cumque suscipit cum
-        perferendis? Consectetur?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi magnam
+        numquam voluptatibus impedit tempora nihil! Pariatur, maxime fugit. Nam
+        eos quam, deleniti totam qui omnis eum commodi harum porro
+        exercitationem.
     </div>
 </main>
 

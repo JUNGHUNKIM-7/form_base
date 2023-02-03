@@ -55,50 +55,16 @@ $header_font: 'Outfit';
 @layer base {
     body {
         font-family: $primary_font;
-        @apply scroll antialiased;
     }
     button {
-        font-family: $primary_font;
-        @apply border_ px-2 py-1 capitalize md:text-h6;
+        font-family: $header_font;
+        @apply border_ px-4 py-2 uppercase font-medium text-h6 md:text-h5;
         :hover {
             @apply shadow-md;
         }
     }
     header {
         font-family: $header_font;
-        font-weight: bold;
-        @apply capitalize;
-    }
-    h1 {
-        @apply text-h1;
-    }
-    h2 {
-        @apply text-h2;
-    }
-    h3 {
-        @apply text-h3;
-    }
-    h4 {
-        @apply text-h4;
-    }
-    h5 {
-        @apply text-h5;
-    }
-    h6 {
-        @apply text-h6;
-    }
-    div,
-    p,
-    article,
-    label,
-    li {
-        @apply align-middle text-p leading-relaxed tracking-normal;
-    }
-    span {
-        @apply align-middle;
-    }
-    i {
-        @apply flex_;
     }
     ul {
         font-family: $header_font;
@@ -110,8 +76,40 @@ $header_font: 'Outfit';
     input[type='text'] {
         @apply input_border_ h-8;
     }
-    article {
-        @apply first-letter:uppercase;
+    label {
+        @apply text-h6 font-medium mb-0.5;
+        font-family: $header_font;
+    }
+    h1 {
+        @apply text-h1 capitalize font-bold;
+    }
+    h2 {
+        @apply text-h2 capitalize font-semibold;
+    }
+    h3 {
+        @apply text-h3 capitalize font-semibold;
+    }
+    h4 {
+        @apply text-h4 capitalize font-medium;
+    }
+    h5 {
+        @apply text-h5;
+    }
+    h6 {
+        @apply text-h6;
+    }
+    div,
+    p,
+    article,
+    li,
+    span {
+        @apply align-middle text-p leading-relaxed tracking-normal;
+    }
+    span {
+        @apply align-middle;
+    }
+    i {
+        @apply flex_;
     }
 }
 

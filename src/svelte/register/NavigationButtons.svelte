@@ -50,6 +50,6 @@
 
 <style lang="scss">
     button {
-        @apply ml-2 border-slate-500 uppercase text-slate-400;
+        @apply ml-2 border-slate-500 text-slate-400;
     }
 </style>
