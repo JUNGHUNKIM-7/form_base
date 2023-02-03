@@ -1,0 +1,22 @@
+---
+import Document from '../components/Document.astro'
+import Layout from '../svelte/register/Layout.svelte'
+import SuperBody from '../svelte/register/SuperBody.svelte'
+import Errs from '../svelte/register/Errs.svelte'
+import BottomNavigation from '../svelte/register/BottomNavigation.svelte'
+import NavigationButtons from '../svelte/register/NavigationButtons.svelte'
+---
+
+<Document title="form">
+    <Fragment slot="layout">
+        <Layout client:idle>
+            <SuperBody client:load />
+        </Layout>
+    </Fragment>
+    <Fragment slot="nav">
+        <BottomNavigation client:load>
+            <Errs client:load />
+            <NavigationButtons client:visible />
+        </BottomNavigation>
+    </Fragment>
+</Document>

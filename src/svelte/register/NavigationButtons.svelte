@@ -37,19 +37,21 @@
     {#if $pageStore === FORMCOUNT - 1}
         <!-- form Submit to db -->
         <!-- clear all data -->
-        <button
+        <a
+            href="/"
             on:click={() => {
                 formStore.clearSaved()
                 formStore.clearFields()
                 visitedStore.goHome()
                 pageStore.home()
-            }}>submit</button
+            }}>submit</a
         >
     {/if}
 </div>
 
 <style lang="scss">
-    button {
+    button,
+    a {
         @apply ml-2 border-slate-500 text-slate-400;
     }
 </style>

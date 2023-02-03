@@ -36,7 +36,6 @@
             ul {
                 @apply flex flex-col;
                 li {
-                    @apply capitalize;
                     &:last-child {
                         @apply mt-2 text-center text-xs md:text-h6;
                     }

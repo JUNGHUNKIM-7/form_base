@@ -1,22 +1,13 @@
 ---
-import Document from '../components/Document.astro'
-import Layout from '../svelte/register/Layout.svelte'
-import SuperBody from '../svelte/register/SuperBody.svelte'
-import Errs from '../svelte/register/Errs.svelte'
-import BottomNavigation from '../svelte/register/BottomNavigation.svelte'
-import NavigationButtons from '../svelte/register/NavigationButtons.svelte'
+import Body from '../components/Body.astro'
+import Footer from '../components/Footer.astro'
+import Layout from '../components/Layout.astro'
+import Nav from '../components/Nav.astro'
 ---
 
-<Document title="form">
-    <Fragment slot="layout">
-        <Layout client:idle>
-            <SuperBody client:load />
-        </Layout>
-    </Fragment>
-    <Fragment slot="nav">
-        <BottomNavigation client:load>
-            <Errs client:load />
-            <NavigationButtons client:visible />
-        </BottomNavigation>
-    </Fragment>
-</Document>
+<Layout title="home">
+    <a href="/register">go register</a>
+    <Nav />
+    <Body />
+    <Footer />
+</Layout>
